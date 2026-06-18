@@ -98,7 +98,6 @@ exclude:
   - README.md
   - screenshot.png
   - docs/
-  - _old备份
 
 plugins:
   - jekyll-paginate
