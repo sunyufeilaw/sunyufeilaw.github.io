@@ -1,0 +1,105 @@
+###########################################################
+###  全站设置(改这里 = 改整个网站)
+###  改完保存 → 推送到 GitHub → 等 1~2 分钟刷新网址看效果
+###########################################################
+
+# 网站标题(显示在左上角和浏览器标签上)
+title: 孙宇飞
+# 你的名字(显示在页脚)
+author: 孙宇飞
+
+# ---- 导航栏链接 ----
+# 左边是显示的字,右边是要跳到的页面。想加页面就在这里加一行。
+navbar-links:
+  博客: "blog"
+
+# ---- 头像 ----
+# 没有照片就先用 # 注释掉下面这行;以后有照片放到 assets/img/ 里再填路径
+#avatar: "/assets/img/avatar-icon.png"
+round-avatar: true
+
+# ---- 页脚社交链接 ----
+# beautiful-jekyll 没有微信图标,微信号写在了首页文字里;这里放邮箱
+social-network-links:
+  email: "sunyufeilaw@gmail.com"
+
+# ---- 文章页底部的分享按钮(都关了,需要再打开) ----
+share-links-active:
+  twitter: false
+  facebook: false
+  linkedin: false
+  vk: false
+  reddit: false
+
+# 页脚显示的网址
+url-pretty: "sunyufeilaw.github.io"
+
+# 每个页面标题后面都带上网站名
+title-on-all-pages: true
+
+# 导航栏里的搜索按钮
+post_search: true
+
+# 页面底部的“编辑此页”按钮(个人网站不需要,关掉)
+edit_page_button: false
+
+######################################
+# --- 配色(想换风格,改这些颜色值) ---
+######################################
+page-col: "#FFFFFF"          # 页面背景
+text-col: "#404040"          # 正文文字
+link-col: "#008AFF"          # 链接颜色
+hover-col: "#0085A1"         # 鼠标悬停链接颜色
+navbar-col: "#EAEAEA"        # 导航栏背景
+navbar-text-col: "#404040"   # 导航栏文字
+navbar-border-col: "#DDDDDD" # 导航栏边框
+footer-col: "#EAEAEA"        # 页脚背景
+footer-text-col: "#777777"   # 页脚文字
+footer-link-col: "#404040"   # 页脚链接
+footer-hover-col: "#0085A1"  # 页脚悬停
+
+# 日期显示格式(文章发布时间)
+date_format: "%Y年%-m月%-d日"
+
+#################################################################
+# --- 下面是给程序看的设置,不懂就别动,以免网站出错 ---
+#################################################################
+timezone: "Asia/Shanghai"
+markdown: kramdown
+highlighter: rouge
+permalink: /:year-:month-:day-:title/
+paginate: 5
+
+kramdown:
+  input: GFM
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      comments: false
+      social-share: true
+  -
+    scope:
+      path: ""
+    values:
+      layout: "page"
+
+# 不参与网站生成的文件/文件夹
+exclude:
+  - CHANGELOG.md
+  - CNAME
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - screenshot.png
+  - docs/
+  - _old备份
+
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
